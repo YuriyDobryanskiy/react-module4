@@ -2,7 +2,7 @@
     width: calc((100% - 30px) / 4);
     cursor: pointer;
     transition: transform 150ms ease-in-out;
-    height: 80px;
+    height: 150px;
     overflow: hidden;
 }
 

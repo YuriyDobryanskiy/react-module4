@@ -1,0 +1,43 @@
+input {
+    display: block;
+}
+
+header {
+    padding: 12px 0;
+    background-color: rgb(55, 90, 165);
+}
+
+.inputContainer {
+    width: 200px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.searchInput {
+    padding: 8px;
+    width: 200px;
+    padding-left: 32px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.searchSVG {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: '#000000';
+}
+
+.submitBtn {
+    width: 31px;
+    height: 31px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}

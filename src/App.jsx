@@ -65,7 +65,11 @@ export const App = () => {
     <Container>
       <h1>Image Search</h1>
 
-      <SearchBox setSearchQuery={setSearchQuery} />
+      <SearchBox
+        setSearchQuery={setSearchQuery}
+        setImages={setImages}
+        setPage={setPage}
+      />
       <ImageGallery images={images} />
       {isLoading && <LoadingSpinner />}
 

@@ -1,7 +1,7 @@
 import styles from './SearchBox.module.css';
 import { BsSearch } from 'react-icons/bs';
 
-export const SearchBox = ({ setSearchQuery }) => {
+export const SearchBox = ({ setSearchQuery, setImages, setPage }) => {
   const handleSubmit = event => {
     event.preventDefault();
     const query = event.target.elements.query.value;
@@ -11,6 +11,8 @@ export const SearchBox = ({ setSearchQuery }) => {
       return;
     }
     setSearchQuery(query);
+    setImages([]);
+    setPage(1);
   };
 
   return (

@@ -23,10 +23,6 @@ export const App = () => {
   //
   //
   //
-  useEffect(() => {
-    setImages([]);
-    setPage(1);
-  }, [searchQuery]);
 
   useEffect(() => {
     async function fetchAllImages() {

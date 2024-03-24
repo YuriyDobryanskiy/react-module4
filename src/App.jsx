@@ -32,10 +32,15 @@ export const App = () => {
       try {
         if (searchQuery.length >= 3) {
           const { data, totalPages } = await fetchImages(searchQuery, page);
-          setImages(prevState => {
-            return [...prevState, ...data];
-          });
-          setTotalPages(totalPages);
+          if (data.length != 0) {
+            setImages(prevState => {
+              return [...prevState, ...data];
+            });
+            setTotalPages(totalPages);
+          } else {
+            ErrorMessage('No items were found for your request!');
+            setTotalPages(0);
+          }
         }
       } catch (error) {
         ErrorMessage(error.message);

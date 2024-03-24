@@ -1,7 +1,7 @@
-import styles from './SearchBox.module.css';
+import styles from './SearchBar.module.css';
 import { BsSearch } from 'react-icons/bs';
 
-export const SearchBox = ({ setSearchQuery, setImages, setPage }) => {
+export const SearchBar = ({ setSearchQuery, setImages, setPage }) => {
   const handleSubmit = event => {
     event.preventDefault();
     const query = event.target.elements.query.value;

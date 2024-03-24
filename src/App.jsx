@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import {
   Container,
-  SearchBox,
+  SearchBar,
   ImageGallery,
   LoadingSpinner,
   ErrorMessage,
@@ -63,7 +63,7 @@ export const App = () => {
 
   return (
     <Container>
-      <SearchBox
+      <SearchBar
         setSearchQuery={setSearchQuery}
         setImages={setImages}
         setPage={setPage}

@@ -61,14 +61,15 @@ export const App = () => {
     setPage(prevState => (prevState += 1));
   };
 
-  function clearSubmit() {
+  function clearSubmit(query) {
+    setSearchQuery(query);
     setImages([]);
     setPage(1);
   }
 
   return (
     <Container>
-      <SearchBar setSearchQuery={setSearchQuery} clearSubmit={clearSubmit} />
+      <SearchBar clearSubmit={clearSubmit} />
       <ImageGallery images={images} onClick={handleImageClick} />
       {isLoading && <LoadingSpinner />}
 

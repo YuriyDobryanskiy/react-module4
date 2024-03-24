@@ -4,7 +4,7 @@ import { ErrorMessage } from 'components';
 
 import { BsSearch } from 'react-icons/bs';
 
-export const SearchBar = ({ setSearchQuery, clearSubmit }) => {
+export const SearchBar = ({ clearSubmit }) => {
   const handleSubmit = event => {
     event.preventDefault();
     const query = event.target.elements.query.value;
@@ -13,8 +13,7 @@ export const SearchBar = ({ setSearchQuery, clearSubmit }) => {
       ErrorMessage('Введіть текст для пошуку зображень.');
       return;
     }
-    setSearchQuery(query);
-    clearSubmit();
+    clearSubmit(query);
     event.target.elements.query.value = '';
   };
 

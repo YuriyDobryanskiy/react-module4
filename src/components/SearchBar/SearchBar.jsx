@@ -1,18 +1,21 @@
 import styles from './SearchBar.module.css';
+
+import { ErrorMessage } from 'components';
+
 import { BsSearch } from 'react-icons/bs';
 
-export const SearchBar = ({ setSearchQuery, setImages, setPage }) => {
+export const SearchBar = ({ setSearchQuery, clearSubmit }) => {
   const handleSubmit = event => {
     event.preventDefault();
     const query = event.target.elements.query.value;
 
     if (query.trim() === '') {
-      alert('Введіть текст для пошуку зображень.');
+      ErrorMessage('Введіть текст для пошуку зображень.');
       return;
     }
     setSearchQuery(query);
-    setImages([]);
-    setPage(1);
+    clearSubmit();
+    event.target.elements.query.value = '';
   };
 
   return (

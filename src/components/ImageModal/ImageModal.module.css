@@ -1,0 +1,25 @@
+.content {
+    inset: 50% auto auto 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border: 1px solid rgb(204, 204, 204);
+    background: rgb(255, 255, 255);
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px;
+    text-align: right;
+}
+
+.content>img {
+    object-fit: cover;
+    height: 700px;
+    width: 100%;
+    max-width: 900px;
+    min-width: 700px;
+}
+
+.close {
+    margin: 5px;
+}

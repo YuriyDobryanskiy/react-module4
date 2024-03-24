@@ -8,6 +8,7 @@ import {
   LoadMoreBtn,
   ImageModal,
 } from 'components';
+
 import { fetchImages } from './services/api.js';
 
 export const App = () => {
@@ -20,7 +21,6 @@ export const App = () => {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
 
-  //
   //
   //
 
@@ -38,7 +38,7 @@ export const App = () => {
           setTotalPages(totalPages);
         }
       } catch (error) {
-        console.error('response =>', error.message);
+        ErrorMessage(error.message);
       } finally {
         setIsLoading(false);
       }
@@ -47,15 +47,15 @@ export const App = () => {
     fetchAllImages();
   }, [searchQuery, page]);
 
-  // const handleImageClick = largeImageURL => {
-  //   setShowModal(true);
-  //   setLargeImageURL(largeImageURL);
-  // };
+  const handleImageClick = largeImageURL => {
+    setShowModal(true);
+    setLargeImageURL(largeImageURL);
+  };
 
-  // const closeModal = () => {
-  //   setShowModal(false);
-  //   setLargeImageURL('');
-  // };
+  const closeModal = () => {
+    setShowModal(false);
+    setLargeImageURL('');
+  };
 
   const loadMore = () => {
     setPage(prevState => (prevState += 1));
@@ -63,20 +63,22 @@ export const App = () => {
 
   return (
     <Container>
-      <h1>Image Search</h1>
-
       <SearchBox
         setSearchQuery={setSearchQuery}
         setImages={setImages}
         setPage={setPage}
       />
-      <ImageGallery images={images} />
+      <ImageGallery images={images} onClick={handleImageClick} />
       {isLoading && <LoadingSpinner />}
 
       {totalPages > 1 && !error && <LoadMoreBtn loadMore={loadMore} />}
-      {/* {showModal && (
-        <ImageModal onClose={closeModal} largeImageURL={largeImageURL} />
-      )} */}
+      {showModal && (
+        <ImageModal
+          isOpen={showModal}
+          onClose={closeModal}
+          largeImageURL={largeImageURL}
+        />
+      )}
     </Container>
   );
 };

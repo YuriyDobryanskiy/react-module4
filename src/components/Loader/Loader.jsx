@@ -8,7 +8,7 @@ export const LoadingSpinner = () => {
       width="80"
       color="#4fa94d"
       ariaLabel="oval-loading"
-      wrapperStyle={{}}
+      wrapperStyle={{ justifyContent: 'center', margin: '100px' }}
       wrapperClass=""
     />
   );

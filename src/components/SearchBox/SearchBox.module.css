@@ -8,14 +8,14 @@ header {
 }
 
 .inputContainer {
-    width: 200px;
+    width: 400px;
     position: relative;
     margin: 0 auto;
 }
 
 .searchInput {
     padding: 8px;
-    width: 200px;
+    width: 100%;
     padding-left: 32px;
     border: none;
     outline: none;

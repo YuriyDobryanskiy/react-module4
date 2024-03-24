@@ -23,7 +23,7 @@ export const App = () => {
 
   //
   //
-  //
+
   useEffect(() => {
     async function fetchAllImages() {
       setIsLoading(true);

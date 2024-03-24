@@ -14,7 +14,10 @@
     "clsx": "^2.1.0",
     "date-fns": "^3.1.0",
     "formik": "^2.4.5",
+    "izitoast": "^1.4.0",
     "lazyload": "^2.0.0-rc.2",
+    "message-box": "^0.2.7",
+    "muse-ui-message": "^0.2.1",
     "nanoid": "^5.0.6",
     "path": "^0.12.7",
     "react": "^18.2.0",
@@ -22,6 +25,7 @@
     "react-icons": "^4.12.0",
     "react-loader-spinner": "^6.1.6",
     "react-modal": "^3.16.1",
+    "simplelightbox": "^2.14.2",
     "yup": "^1.4.0"
   },
   "devDependencies": {
